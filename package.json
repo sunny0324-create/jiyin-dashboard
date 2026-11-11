@@ -6,12 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:gulin": "node --import ./tests/register.mjs --test tests/gulin/*.test.mjs",
+    "diagnose:gulin": "node --import ./scripts/register-typescript.mjs scripts/gulin-diagnose.ts",
+    "test:history": "node --import ./tests/register.mjs --test tests/history/*.test.mjs",
+    "test:history:sample": "node --import ./tests/register.mjs --test tests/history/sample.integration.mjs",
+    "validate:history": "node --import ./scripts/register-typescript.mjs scripts/validate-history.ts",
+    "import:history": "node --import ./scripts/register-typescript.mjs scripts/import-history.ts",
+    "test:history:sqlite": "node --import ./tests/register.mjs --test tests/history-sqlite/*.test.mjs",
+    "test:history:sqlite:sample": "node --import ./tests/register.mjs --test tests/history-sqlite/sample.integration.mjs"
   },
   "dependencies": {
+    "fflate": "0.8.3",
     "next": "16.4.6",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "read-excel-file": "9.3.14"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",
