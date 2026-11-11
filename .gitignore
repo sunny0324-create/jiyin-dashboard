@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Enterprise data - do not commit
+/data/
+/references/
+
+# Local databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Local environment files
+.env.local
+.env.*.local
